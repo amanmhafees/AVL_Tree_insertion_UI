@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V6"/><path d="M9 18h6"/><path d="M3 10h18"/><path d="M3 14h18"/></svg>
+                <h1>AVL Tree Visualizer</h1>
+            </div>
+            <p class="subtitle">A beautiful visualization of self-balancing binary search trees</p>
+        </header>
+
+        <div class="input-section">
+            <input type="number" id="valueInput" placeholder="Enter a number" class="number-input">
+            <button id="insertButton" class="insert-btn">Insert</button>
+        </div>
+
+        <div class="visualization-container">
+            <div id="treeDisplay" class="tree-display"></div>
+            <div id="chatDisplay" class="chat-display"></div>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>What is an AVL Tree?</h3>
+                <p>AVL trees are self-balancing binary search trees where the height difference between left and right subtrees cannot exceed one.</p>
+            </div>
+            <div class="info-card">
+                <h3>How it Works</h3>
+                <p>When you insert a number, the tree automatically rebalances itself using rotations to maintain optimal performance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="avlTree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+<!-- working-->
