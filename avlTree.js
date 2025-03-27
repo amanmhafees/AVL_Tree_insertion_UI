@@ -1,3 +1,5 @@
+//working
+
 class Node {
     constructor(value) {
         this.value = value;
@@ -27,7 +29,7 @@ class AVLTree {
         y.height = Math.max(this.height(y.left), this.height(y.right)) + 1;
         x.height = Math.max(this.height(x.left), this.height(x.right)) + 1;
 
-        this.addChatMessage(`Right rotation (LL) on node ${y.value}`);
+        this.addChatMessage(`Right rotation (LL child) on node ${y.value}`);
         return x;
     }
 
@@ -41,7 +43,7 @@ class AVLTree {
         x.height = Math.max(this.height(x.left), this.height(x.right)) + 1;
         y.height = Math.max(this.height(y.left), this.height(y.right)) + 1;
 
-        this.addChatMessage(`Left rotation (RR) on node ${x.value}`);
+        this.addChatMessage(`Left rotation (RR child) on node ${x.value}`);
         return y;
     }
 
@@ -72,13 +74,13 @@ class AVLTree {
 
         // Left Left Case
         if (balance > 1 && value < node.left.value) {
-            this.addChatMessage(`Unbalanced at node ${node.value}: LL rotation`);
+            this.addChatMessage(`Unbalanced at node ${node.value}: RR rotation`);
             return this.rightRotate(node);
         }
 
         // Right Right Case
         if (balance < -1 && value > node.right.value) {
-            this.addChatMessage(`Unbalanced at node ${node.value}: RR rotation`);
+            this.addChatMessage(`Unbalanced at node ${node.value}: LL rotation`);
             return this.leftRotate(node);
         }
 
